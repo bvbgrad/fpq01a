@@ -1,0 +1,4 @@
+include fpq_app/schema.sql
+graft fpq_app/static
+graft fpq_app/templates
+global-exclude *.pyc
