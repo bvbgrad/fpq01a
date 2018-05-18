@@ -40,6 +40,6 @@ def create_app(test_config=None):
 
     from . import quiz
     app.register_blueprint(quiz.bp)
-    app.add_url_rule('/', endpoint='index')
+    app.add_url_rule('/', endpoint='quiz_prep')
 
     return app
