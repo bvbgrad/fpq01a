@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %}Quiz{% endblock %}</h1>
+{% if g.user %}
+<a href="{{ url_for('quiz.display_scores') }}">Click here when done with the test</a>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Image Gallery</h2>
+    <p>The .thumbnail class can be used to display an image gallery.</p>
+    <p>The .caption class adds proper padding and a dark grey color to text inside thumbnails.</p>
+    <p>Click on the images to enlarge them.</p>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <a href="{{ url_for('static', filename='lights.jpg') }}" target="_blank">
+                    <img src="{{ url_for('static', filename='lights.jpg') }}" alt="Lights" style="width:100%">
+                    <div class="caption">
+                        <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

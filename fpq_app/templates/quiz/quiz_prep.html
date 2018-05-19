@@ -3,10 +3,9 @@
 {% block header %}
 <h1>{% block title %}Generation{% endblock %}</h1>
 {% if g.user %}
-<p>Choose which generation</p>
+<h2><a href="{{ url_for('quiz.quiz') }}">Start the Quiz</a></h2>
 {% endif %}
 {% endblock %}
 
 {% block content %}
-
 {% endblock %}

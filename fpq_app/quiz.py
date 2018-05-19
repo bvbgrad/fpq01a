@@ -13,6 +13,12 @@ def quiz_prep():
     return render_template('quiz/quiz_prep.html')
 
 
+@bp.route('/quiz', methods=['POST', 'GET'])
+@login_required
+def quiz():
+    return render_template('quiz/quiz.html')
+
+
 @bp.route('/scores', methods=['POST', 'GET'])
 @login_required
 def display_scores():
