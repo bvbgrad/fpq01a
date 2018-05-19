@@ -7,6 +7,12 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'flask', 'werkzeug', 'attr'
+        'flask', 'werkzeug', 'attr', 'pytest'
+    ],
+    setup_requires=[
+        'pytest',
+    ],
+    tests_require=[
+        'pytest',
     ],
 )

@@ -6,7 +6,8 @@
 
 // Makes sure the document is ready before executing scripts
 function base_js(){
-	var utcDate = new Date(Date.now())
+
+	var utcDate = new Date().toString()
 	console.log(utcDate + " base.js was loaded successfully ");
 
 	var footer = document.querySelector('footer');
