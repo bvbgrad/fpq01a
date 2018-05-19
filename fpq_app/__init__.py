@@ -1,6 +1,7 @@
 import os
 
-from flask import Flask
+from flask import (
+    Flask, render_template)
 
 
 def create_app(test_config=None):
@@ -27,8 +28,9 @@ def create_app(test_config=None):
 
     # a simple page that says hello
     @app.route('/hello')
-    def hello():
-        return 'Hello, FPQ world!'
+    @app.route('/hello/<name>')
+    def hello(name=None):
+        return render_template('auth/hello.html', name=name)
 
     # Import and call db.init_app function from the factory
     # so it can be called using the "flask init-db" command
